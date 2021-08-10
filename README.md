@@ -1,6 +1,5 @@
 # The real DevOps challenge
 
-![Intelygenz](./assets/intelygenz.logo.jpeg)
 
 This challenge was designed to look for your devops skills. This repository contains a simple python application. But it is not completed at all.
 The app needs a mongodb database to be able to run it.
@@ -193,11 +192,11 @@ curl localhost:8080/api/v1/restaurant/55f14313c7447c3da705224b | jq
 
 ## The challenge starts here
 
-You have to **fork** this repository to complete the following challenges in your own `github` account. **Feel free to solve the challenge you want**.
+You have to **clone** this repository to complete the following challenges in your own `github` account.
 
 Once completed, **add a `SOLUTIONS.md` file justifying your responses** and don't forget to send back the solution.
 
-If you have any doubt, don't hesitate to [open an issue](https://github.com/intelygenz/the-real-devops-challenge/issues/new) to ask any question about any challenge.
+If you have any doubt, don't hesitate to to ask any question about any challenge.
 
 ### Challenge 1. The API returns a list instead of an object
 
