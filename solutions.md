@@ -61,6 +61,6 @@ Here we used minikube to deploy the app on the kubernetes. Please find the below
 mongo.yml - To deploy the DB using our customized image with the host volume. 
 mongo-svc.yml - To create the service for the DB
 app.yml - To deploy the app using our customized image and it has environment variable. It's referring to the DB service.
-app-svc.yml - To create the service for the app and it's exposing as a Nodeport. So that, can browse the page from outside. 
+app-svc.yml - To create the service for the app and it's exposing as a ClusterIP. So that, can browse the page from the minikube box. If you want, can expose as NodePort and can browse using the Node IP. 
 
 Location of the files: kubernetes folder

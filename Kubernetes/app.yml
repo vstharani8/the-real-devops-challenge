@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant
+  labels:
+    app: restaurant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: restaurant
+  template:
+    metadata:
+      labels:
+        app: restaurant
+    spec:
+      containers:
+        - name: restaurant
+          image: vstharani8/restaurant:1.0
+          env:
+          - name: MONGO_URI
+            value: mongodb://mongo:27017/restaurant
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
