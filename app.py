@@ -28,10 +28,10 @@ def restaurant(id):
     if not restaurants:
         return jsonify(
                     message="Wrong ID  provided.",
-                    category="error",
-                    status=404
+                    category="HTTP error",
+                    statusCode=204
          )
-    return jsonify(restaurants)
+    return jsonify(restaurants[0])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=False, port=8080)
