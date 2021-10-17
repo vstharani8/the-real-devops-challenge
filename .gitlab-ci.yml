@@ -1,0 +1,22 @@
+image: python:3.6
+
+before_script:
+  - python -V  
+
+stages:
+  - Test
+  - Deploy
+
+Test App:
+  stage: Test
+  script:
+    - pip install tox  
+    - tox -e py36
+
+Deploy App:
+  stage: Deploy
+  script:
+      - pip install virtualenv
+      - virtualenv venv
+      - source venv/bin/activate
+      - pip install -r requirements.txt
