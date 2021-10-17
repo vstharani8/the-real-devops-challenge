@@ -29,6 +29,8 @@ def restaurant(id):
     return jsonify(restaurants[0])
 
 ```
+![diagram](./images/Deployment_Screenshot.png)
+
 ### Challenge 2. Test the application in any cicd system
 In this challenge, we used Gitlab-CI tool to automate the deployment of the app and created new pipeline file for that. 
  
@@ -40,7 +42,8 @@ In this pipeline, having 2 stages.
 * Deploy - - To deploy the application (Here just installing the app requirements)
 If I commit any changes in the repo, automatically will start the pipeplien to deploy the solution. 
 
-![diagram](./images/Deployment_Screenshot.png)
+![diagram](./images/JsonObject_screenshot.png)
+![diagram](./images/Error_Screenshot.png)
 
 ### Challenge 3. Dockerize the APP
 Here used python image and added some instructions to run the app. Please refer the Dockerfile for the containerized app. 
