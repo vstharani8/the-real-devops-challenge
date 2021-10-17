@@ -13,8 +13,8 @@ services:
     app:
       depends_on:
         - mongodb
-      image: vstharani8/restaurant:1.0
-      container_name: restaurant
+      image: vstharani8/app:1.0
+      container_name: app
       ports:
         - "8080:8080"
       restart: always
