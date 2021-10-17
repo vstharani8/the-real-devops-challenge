@@ -47,19 +47,27 @@ If I commit any changes in the repo, automatically will start the pipeline to de
 ![diagram](./images/Deployment_Screenshot.png)
 ### Challenge 3. Dockerize the APP
 Here used python image and added some instructions to run the app. Please refer to the Dockerfile for the containerized app.
+```bash
+App DockerFile - Dockerfile
+```
 
 ### Challenge 4. Dockerize the database
 I used Dockerfile to create the MongoDB image with help of the import script (import the data). 
-Dockerfile Location - data/Dockerfile
-
+```bash
+DB DockerFile - data/Dockerfile
+```
 ### Challenge 5. Docker Compose it
 In this challenge, created a docker-compose.yml file with the help of a previously created app and DB image. Here app having an environment variable and It's referring to the DB container. 
-DockerCompose File Location - docker-compose/docker-compose.yml
-
+```bash
+DockerCompose File - docker-compose/docker-compose.yml
+```
 ### Final Challenge. Deploy it on kubernetes
 Here we used minikube to deploy the app on the Kubernetes. Please find the below deployment file to deploy the app. 
 * mongo.yml - To deploy the DB using our customized image with the host volume. 
 * mongo-svc.yml - To create the service for the DB 
 * app.yml - To deploy the app using our customized image and it has an environment variable. It's referring to the DB service. 
 * app-svc.yml - To create the service for the app and its expose as a ClusterIP. So that can browse the page from the minikube box. If you want, can expose it as NodePort and can browse using the Node IP.
-Location of the files: kubernetes folder
+
+```bash
+Deployment Files: kubernetes/*.yml
+```
