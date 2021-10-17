@@ -1,4 +1,4 @@
-# **The real DevOps challenge**
+# **The real DevOps challenge Solution**
 
 Please find the below solutions for the all challenges.
 
@@ -29,7 +29,9 @@ def restaurant(id):
     return jsonify(restaurants[0])
 
 ```
-![diagram](./images/Deployment_Screenshot.png)
+
+![diagram](./images/JsonObject_screenshot.png)
+![diagram](./images/Error_Screenshot.png)
 
 ### Challenge 2. Test the application in any cicd system
 In this challenge, we used Gitlab-CI tool to automate the deployment of the app and created new pipeline file for that. 
@@ -42,17 +44,13 @@ In this pipeline, having 2 stages.
 * Deploy - - To deploy the application (Here just installing the app requirements)
 If I commit any changes in the repo, automatically will start the pipeplien to deploy the solution. 
 
-![diagram](./images/JsonObject_screenshot.png)
-![diagram](./images/Error_Screenshot.png)
-
+![diagram](./images/Deployment_Screenshot.png)
 ### Challenge 3. Dockerize the APP
 Here used python image and added some instructions to run the app. Please refer the Dockerfile for the containerized app. 
-
 
 ### Challenge 4. Dockerize the database
 I used Dockerfile to create the mongodb image with help of the import script (import the data). 
 Dockerfile Location - data/Dockerfile
-
 
 ### Challenge 5. Docker Compose it
 In this challenge, created docker-compose.yml file with the help of previously created the app and db image. Here app having environment variable and It's referring to the DB container.
@@ -66,6 +64,3 @@ app.yml - To deploy the app using our customized image and it has environment va
 app-svc.yml - To create the service for the app and it's exposing as a Nodeport. So that, can browse the page from outside. 
 
 Location of the files: kubernetes folder
-
-
-
