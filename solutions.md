@@ -31,11 +31,13 @@ def restaurant(id):
 ```
 ### Challenge 2. Test the application in any cicd system
 In this challenge, we used Gitlab-CI tool to automate the deployment of the app and created new pipeline file for that. 
-Pipeline File 
+ 
 ```bash
-.gitlab-ci.yml.
+Pipeline File - .gitlab-ci.yml.
 ```
 In this pipeline, having 2 stages. 
 * Test -  To test the application using tox package
 * Deploy - - To deploy the application (Here just installing the app requirements)
 If I commit any changes in the repo, automatically will start the pipeplien to deploy the solution. 
+
+![diagram](./images/Deployment_Screenshot.png)
